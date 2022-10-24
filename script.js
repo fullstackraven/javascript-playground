@@ -41,3 +41,13 @@ paragraph.textContent = "ME TOO!"
 div.appendChild(paragraph);
 
 container.append(div);
+
+//Button event - onclick - Method 2
+const btn = document.querySelector('#btn');
+btn.onclick = () => alert('Hi World!');
+
+//Button event - event listner - Method 3
+const bttn = document.querySelector('#bttn'); 
+bttn.addEventListener('click', () => {
+    alert("Hello Planet Earth!");
+});

@@ -51,3 +51,34 @@ const bttn = document.querySelector('#bttn');
 bttn.addEventListener('click', () => {
     alert("Hello Planet Earth!");
 });
+
+//Button event - with function - All methods
+//Method 1
+function alertFunction() {
+    alert('YAY YOU DID IT!!');
+}
+
+//Method 2
+const buttn = document.querySelector('#buttn');
+buttn.onclick = alertFunction;
+
+//Method 3
+const btton = document.querySelector('#btton');
+btton.addEventListener('click', alertFunction);
+btton.addEventListener('click', function(e) {
+    console.log(e);
+});
+btton.addEventListener('click', function (e) {
+    console.log(e.target);
+});
+btton.addEventListener('click', function (e) {
+    e.target.style.background = 'green';
+});
+
+//Attaching Listeners to Groups of Nodes
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+});
